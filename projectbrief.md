@@ -1,7 +1,35 @@
 # Custom AI Bot API Project Brief
 
-## Overview
-This project is a custom AI chatbot API built with Express.js and TypeScript. It uses LangChain, MongoDB vector database, and OpenAI to create a RAG (Retrieval-Augmented Generation) system that can answer questions based on document retrieval.
+## Project Overview
+This is an API for a custom AI chatbot built with Express.js, MongoDB, and LangChain. The system is designed to provide intelligent responses to user queries by leveraging a conversational RAG (Retrieval-Augmented Generation) architecture.
+
+## Key Components
+- **Express.js Backend**: Handles HTTP requests and manages the API endpoints
+- **MongoDB with Vector Search**: Stores documents and provides vector search capabilities
+- **LangChain Integration**: Facilitates the creation of the conversational graph and RAG workflow
+- **OpenAI Models**: GPT-4o for conversation and text-embedding-3-large for embeddings
+
+## System Architecture
+The system follows a graph-based processing pipeline:
+1. Categorize the user question
+2. Retrieve relevant documents from MongoDB
+3. Generate an answer using the LLM with context
+4. Validate the answer quality
+5. Refine the answer if needed
+6. Handle potential human assistance needs
+
+## Technical Stack
+- TypeScript/Node.js
+- Express.js for API framework
+- MongoDB for document and vector storage
+- LangChain for RAG pipeline
+- OpenAI GPT-4o and embeddings
+
+## Project Goals
+- Provide accurate, contextual responses to user queries
+- Maintain conversation history across sessions
+- Support dynamic document retrieval based on question context
+- Handle edge cases with appropriate human handoff
 
 ## Technology Stack
 - **Backend**: Node.js with Express.js (TypeScript)

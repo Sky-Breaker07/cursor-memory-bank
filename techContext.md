@@ -1,5 +1,50 @@
 # Technical Context
 
+## Development Environment
+- Node.js with TypeScript
+- pnpm as package manager
+- Express.js for API framework
+- MongoDB Atlas for vector database
+- Nodemon for development server
+
+## Key Dependencies
+- **@langchain/core**: Core LangChain functionality
+- **@langchain/openai**: OpenAI integration for LangChain
+- **@langchain/langgraph**: Graph-based workflow for LangChain
+- **@langchain/mongodb**: MongoDB vector store integration
+- **express**: Web server framework
+- **mongodb**: MongoDB client library
+- **dotenv**: Environment variable management
+- **typescript**: TypeScript compiler
+
+## File Structure
+- **src/app.ts**: Main application entry point
+- **src/routes/**: API route definitions
+- **src/controller/**: Request handling logic
+- **src/api/**: LangChain graph implementation
+- **src/ai/**: AI model configurations
+- **src/db/**: Database configuration and access
+- **src/utils/**: Utility functions and helpers
+
+## Environment Configuration
+Required environment variables:
+- `PORT`: Server port (default: 3000)
+- `OPENAI_API_KEY`: OpenAI API key
+- `MONGO_URI`: MongoDB connection string
+- `MONGO_DB`: MongoDB database name
+- `MONGO_COLLECTION`: MongoDB collection for vectors
+
+## Build and Run Process
+- Development: `pnpm dev` (uses nodemon)
+- Build: `pnpm build` (compiles TypeScript)
+- Start: `pnpm start` (runs built code)
+- Seeding: `pnpm seed` (populates database with initial data)
+
+## Testing Strategy
+- Currently no automated tests
+- Manual API testing via Postman or curl
+- Console logging for development debugging
+
 ## Application Structure
 - `src/app.ts`: Main Express application entry point
 - `src/routes/chat.ts`: API route definitions for chat endpoint

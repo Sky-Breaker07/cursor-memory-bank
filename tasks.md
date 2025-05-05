@@ -37,4 +37,43 @@
 - [x] Configure LangChain with OpenAI
 - [x] Set up MongoDB vector store
 - [x] Implement document processing for DOCX files
-- [x] Create seed script for document ingestion 
+- [x] Create seed script for document ingestion
+
+# Development Tasks
+
+## Current Priority Tasks
+- [ ] Optimize MongoDB vector search performance
+- [ ] Implement improved context relevance scoring algorithm
+- [ ] Add unit tests for critical components
+- [ ] Enhance error logging and monitoring
+- [ ] Update documentation with API usage examples
+
+## Backlog
+- [ ] Implement streaming responses for better UX
+- [ ] Add support for document uploading through API
+- [ ] Create admin dashboard for system monitoring
+- [ ] Implement rate limiting and API key authentication
+- [ ] Support additional file formats (PDF, HTML, Markdown)
+- [ ] Add multilingual support for questions and responses
+- [ ] Implement feedback mechanism for response quality
+
+## Code Refactoring
+- [ ] Extract common utility functions to dedicated modules
+- [ ] Improve type definitions and interfaces
+- [ ] Standardize error handling across the application
+- [ ] Enhance logging for better debugging
+
+## Technical Debt
+- [ ] Add comprehensive JSDocs to all functions
+- [ ] Create API documentation with Swagger
+- [ ] Implement consistent linting rules
+- [ ] Add integration tests with MongoDB mocking
+
+## Completed Tasks
+- [x] Set up Express.js API server with TypeScript
+- [x] Implement MongoDB Atlas Vector Search integration
+- [x] Create LangChain graph-based conversation flow
+- [x] Add OpenAI integration for LLM and embeddings
+- [x] Implement session management for conversation history
+- [x] Add error handling and fallback mechanisms
+- [x] Implement analytics tracking for monitoring 

@@ -1,5 +1,35 @@
 # Product Context
 
+## Chatbot Purpose
+The AI chatbot API provides a backend system for powering intelligent conversational interfaces. It's designed to:
+- Answer user questions based on document context stored in a vector database
+- Maintain conversation history for contextual responses
+- Handle a variety of question categories with specialized processing
+- Provide fallback mechanisms for questions that require human assistance
+
+## User Experience Goals
+- Fast, relevant responses to user queries
+- Context-aware conversation that remembers previous interactions
+- Appropriate handling of edge cases and limitations
+- Seamless handoff to human support when necessary
+
+## Performance Metrics
+- Response time (tracked in analytics)
+- Context relevance scores
+- Token usage efficiency
+- Question categorization accuracy
+
+## Integration Points
+- MongoDB Atlas for vector search and document storage
+- OpenAI API for LLM and embedding models
+- Express.js REST API endpoints for client applications
+
+## Limitations and Boundaries
+- The system handles only text-based queries and responses
+- No streaming responses implemented (batch responses only)
+- Limited to the information contained in the vector database
+- Model context window limitations apply to conversation history
+
 ## Business Domain
 This chatbot API appears to be designed for a company operating in the following domains:
 

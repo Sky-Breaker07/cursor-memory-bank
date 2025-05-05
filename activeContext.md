@@ -1,48 +1,36 @@
 # Active Context
 
-## Project Summary
-This project is a custom AI chatbot API built using Express.js, TypeScript, LangChain, and MongoDB. It implements a RAG (Retrieval-Augmented Generation) pattern to provide context-aware responses about agricultural commodities, logistics, and supply chain services.
+## Current System Focus
+This is a custom AI chatbot API that uses a conversational RAG architecture to provide intelligent responses to user queries. The system integrates Express.js, MongoDB vector search, and OpenAI LLMs through LangChain.
 
-## Current State
-- Basic RAG implementation is complete and functional
-- Single API endpoint for chat interactions
-- Document processing pipeline for DOCX files
-- MongoDB vector store integration
+## Key System Components
+1. **Express API Server**: Handles HTTP requests and serves responses
+2. **LangChain StateGraph**: Orchestrates the conversation flow through a series of steps
+3. **MongoDB Vector Store**: Stores documents and enables similarity search
+4. **Session Management**: Maintains conversation history across interactions
+5. **Analytics Tracking**: Logs interactions and performance metrics
 
-## System Architecture
-```
-┌─────────────┐     ┌─────────────┐     ┌───────────────┐     ┌─────────────┐
-│  Express    │────▶│  Controller │────▶│  LangChain    │────▶│  OpenAI     │
-│  API Server │     │  Layer      │     │  StateGraph   │     │  LLM        │
-└─────────────┘     └─────────────┘     └───────────────┘     └─────────────┘
-                                               │
-                                               ▼
-                                        ┌─────────────┐
-                                        │  MongoDB    │
-                                        │  Vector DB  │
-                                        └─────────────┘
-```
+## Implementation Details
+The system follows a graph-based workflow:
+1. **Categorization**: Identifies the type of question
+2. **Retrieval**: Fetches relevant documents from MongoDB
+3. **Generation**: Creates an answer using context and conversation history
+4. **Validation**: Checks answer quality and determines if refinement is needed
+5. **Refinement**: Improves answer quality if necessary
+6. **Human Assistance**: Offers handoff for queries beyond AI capabilities
 
-## Key Components
-1. **Express Server** (`src/app.ts`): Entry point handling API requests
-2. **Chat Controller** (`src/controller/chat.ts`): Processes chat requests
-3. **LangChain Graph** (`src/api/index.ts`): Manages the RAG workflow
-4. **Vector Store** (`src/db/config.ts`): MongoDB integration for document storage
-5. **Seed Script** (`src/db/seed.ts`): Processes documents for vector storage
+## Current Status
+The system has been implemented with core functionality:
+- API endpoint for chat interactions
+- MongoDB vector search integration
+- LangChain graph-based conversation flow
+- Session management for conversation history
+- Error handling and analytics tracking
 
-## Technical Focus Areas
-- RAG implementation using LangChain
-- MongoDB Atlas Vector Search integration
-- Document processing and chunking
-- API design and error handling
-
-## Business Domain Focus
-- Agricultural commodities (grains, oilseeds, pulses)
-- Derivative products (oils, meals)
-- Logistics and transportation services
-- Supply chain solutions
-
-## Current Requirements
-- Environment variables for OpenAI API and MongoDB configuration
-- Node.js and pnpm for package management
-- Source documents in DOCX format 
+## Next Steps
+Potential areas for enhancement:
+- Implement streaming responses
+- Add more robust testing
+- Improve document reordering and relevance scoring
+- Enhance human handoff mechanisms
+- Optimize token usage and response times 
